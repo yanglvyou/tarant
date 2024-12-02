@@ -1,0 +1,7 @@
+dist
+node_modules
+test
+.gitignore
+.prettierignore
+scripts/*
+rollup.config.mjs
