@@ -1,0 +1,11 @@
+@import '../../../app.scss';
+
+.custom-color {
+  color: #1989fa;
+}
+
+.custom-text-color {
+  .taroify-loading__text {
+    color: #1989fa;
+  }
+}

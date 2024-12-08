@@ -9,3 +9,8 @@ packages/**/libs/
 dist/
 coverage
 .swc/
+
+
+
+packages/tarant/dist/*
+packages/tarant/lib/*

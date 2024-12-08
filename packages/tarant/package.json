@@ -13,7 +13,7 @@
     "README.md"
   ],
   "scripts": {
-    "dev": "npm run dev:lib",
+    "dev": "concurrently \"pnpm run dev:rollup\" \"pnpm run dev:lib\"",
     "dev:lib": "tsc --project ./tsconfig.build.json --watch --incremental",
     "dev:rollup": "rollup --config ./rollup.config.js -w --environment NODE_ENV:development",
     "build": "npm run build:lib && npm run build:rollup",
@@ -53,6 +53,7 @@
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4.0.4",
     "jest": "26",
+    "rimraf": "3.0.2",
     "rollup": "^2.16.1",
     "rollup-plugin-copy": "^3.3.0",
     "rollup-plugin-copy-watch": "^0.0.1",

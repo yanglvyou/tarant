@@ -1,7 +1,8 @@
-dist
 node_modules
 test
 .gitignore
 .prettierignore
-scripts/*
-rollup.config.mjs
+packages/icons/dist/*
+packages/icons/lib/*
+packages/tarant/dist/*
+packages/tarant/lib/*
