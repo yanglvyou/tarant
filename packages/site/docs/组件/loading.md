@@ -40,7 +40,7 @@ import { OsLoading } from 'tarant';
 .custom-color {
   color: #1989fa;
 
-  .taroify-loading__text {
+  .tarant-loading__text {
     color: #1989fa;
   }
 }
@@ -87,7 +87,7 @@ import { OsLoading } from 'tarant';
 
 ```scss
 .custom-text-color {
-  .taroify-loading__text {
+  .tarant-loading__text {
     color: #1989fa;
   }
 }

@@ -42,7 +42,7 @@ function getClassObject(props: OsIconProps) {
   const { type } = props;
 
   const classObject = {
-    [`taroify-icon--${type}`]: type,
+    [`tarant-icon--${type}`]: type,
   };
 
   return classObject;
@@ -53,7 +53,7 @@ function onClick(e: ITouchEvent, props: OsIconProps) {
 }
 
 export default function Icon(props: OsIconProps) {
-  const rootClassName = 'taroify-icon'; //组件
+  const rootClassName = 'tarant-icon'; //组件
   const classObject = getClassObject(props); //组件修饰
   const styleObject = Object.assign(getStyleObj(props), props.customStyle);
   const { type, className } = props;
