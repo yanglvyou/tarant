@@ -4,7 +4,7 @@ import { View } from '@tarojs/components';
 import DemoBlock from '../../demoBlock';
 import DemoHeader from '../../demoHeader';
 import DemoTable from '../../demoTable';
-import { OsLoading, OsLoadingProps } from 'tarant';
+import { OsLoading, OsLoadingProps, ConfigProvider } from 'tarant';
 import './index.scss';
 
 function getClassObject() {
@@ -84,9 +84,15 @@ export default function Index(props: OsLoadingProps) {
       </DemoBlock>
 
       <DemoBlock title="垂直排列">
-        <OsLoading size="24px" direction="vertical">
-          加载中...
-        </OsLoading>
+        <ConfigProvider
+          theme={{
+            loadingColor: '#07c160',
+            loadingSize: '30px',
+            loadingTextColor: 'red',
+          }}
+        >
+          <OsLoading direction="vertical">加载中...</OsLoading>
+        </ConfigProvider>
       </DemoBlock>
 
       <DemoBlock title="自定义颜色">
