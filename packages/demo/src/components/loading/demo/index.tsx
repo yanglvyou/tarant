@@ -86,7 +86,7 @@ export default function Index(props: OsLoadingProps) {
       <DemoBlock title="垂直排列">
         <ConfigProvider
           theme={{
-            loadingColor: '#07c160',
+            loadingColor: '#aec107',
             loadingSize: '30px',
             loadingTextColor: 'red',
           }}

@@ -6,7 +6,7 @@ import * as React from 'react';
 import { useMemo } from 'react';
 import { prefixClassname } from '../../utils//prefix';
 import { addUnitPx } from '../../utils/format/unit';
-import { LoadingProps } from 'types/loading';
+import { LoadingProps } from '../../../types/loading';
 
 const SpinIcon = _.range(0, 12).map(key => (
   <View key={key} className={prefixClassname('loading__spinner__item')} />

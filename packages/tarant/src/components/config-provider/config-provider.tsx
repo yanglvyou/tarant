@@ -2,7 +2,7 @@ import { View } from '@tarojs/components';
 import * as _ from 'lodash';
 import * as React from 'react';
 import { CSSProperties, useMemo } from 'react';
-import { ConfigProviderProps } from 'types/config-provider';
+import { ConfigProviderProps } from '../../../types/config-provider';
 
 function convertThemeVarsToCSSVars(themeVars: Record<string, string | number>) {
   const cssVars: Record<string, string | number> = {};
