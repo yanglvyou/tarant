@@ -22,6 +22,11 @@
     }
   }
 
+  .block {
+    display: block;
+    margin-bottom: 24px;
+  }
+
   // .button-item--block {
   //   composes: button-item;
   // }
@@ -30,4 +35,3 @@
 .button-item--block {
   composes: button-item;
 }
-

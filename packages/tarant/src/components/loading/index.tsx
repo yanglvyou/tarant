@@ -1,5 +1,4 @@
 import { View } from '@tarojs/components';
-import { ViewProps } from '@tarojs/components/types/View';
 import classNames from 'classnames';
 import * as _ from 'lodash';
 import * as React from 'react';

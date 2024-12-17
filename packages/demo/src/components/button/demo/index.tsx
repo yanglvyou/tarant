@@ -4,8 +4,7 @@ import { View } from '@tarojs/components';
 import DemoBlock from '../../demoBlock';
 import DemoHeader from '../../demoHeader';
 import DemoTable from '../../demoTable';
-import { OsButton } from 'ossaui';
-// import { OsButton } from 'tarant';
+import { OsButton, OsIcon, ConfigProvider } from 'tarant';
 import './index.scss';
 
 const initialAPI = {
@@ -109,186 +108,316 @@ export default function Index(props: Props) {
   return (
     <View className="demo-button">
       <DemoHeader title={demoTitle}></DemoHeader>
-      <DemoBlock title="类型" hideMb>
+      <DemoBlock title="按钮颜色" hideMb>
         <View className="button-item">
-          <OsButton
-            onClick={event => {
-              onClick(event);
-            }}
-            type="default"
+          <ConfigProvider
+            theme={
+              {
+                // '--button-primary-color': '#2ca8e1',
+                // '--button-primary-background-color': '#e19b2c',
+              }
+            }
           >
-            线框按钮1
-          </OsButton>
+            <OsButton color="primary">主要按钮</OsButton>
+          </ConfigProvider>
         </View>
         <View className="button-item">
-          <OsButton type="primary" onClick={() => onClick2()}>
-            色块按钮
-          </OsButton>
-        </View>
-      </DemoBlock>
-      <DemoBlock hideMb>
-        <View className="button-item">
-          <OsButton type="special1">特殊按钮1</OsButton>
+          <OsButton color="info">信息按钮</OsButton>
         </View>
         <View className="button-item">
-          <OsButton type="special2">特殊按钮2</OsButton>
+          <OsButton color="success">成功按钮</OsButton>
+        </View>
+
+        <View className="button-item">
+          <OsButton color="warning">警告按钮</OsButton>
+        </View>
+
+        <View className="button-item">
+          <OsButton color="danger">危险按钮</OsButton>
+        </View>
+
+        <View className="button-item">
+          <OsButton color="default">默认按钮</OsButton>
         </View>
       </DemoBlock>
 
-      <DemoBlock title="禁用态" hideMb>
+      <DemoBlock title="文本按钮" hideMb>
         <View className="button-item">
-          <OsButton type="default" disabled>
-            线框按钮
+          <OsButton variant="text" color="primary">
+            主要按钮
           </OsButton>
         </View>
         <View className="button-item">
-          <OsButton type="primary" disabled>
-            色块按钮
+          <OsButton variant="text" color="info">
+            信息按钮
+          </OsButton>
+        </View>
+        <View className="button-item">
+          <OsButton variant="text" color="success">
+            成功按钮
+          </OsButton>
+        </View>
+
+        <View className="button-item">
+          <OsButton variant="text" color="warning">
+            警告按钮
+          </OsButton>
+        </View>
+
+        <View className="button-item">
+          <OsButton variant="text" color="danger">
+            危险按钮
+          </OsButton>
+        </View>
+
+        <View className="button-item">
+          <OsButton variant="text" color="default">
+            默认按钮
+          </OsButton>
+        </View>
+      </DemoBlock>
+
+      <DemoBlock title="轮廓按钮" hideMb>
+        <View className="button-item">
+          <OsButton variant="outlined" color="primary">
+            主要按钮
+          </OsButton>
+        </View>
+        <View className="button-item">
+          <OsButton variant="outlined" color="info">
+            信息按钮
+          </OsButton>
+        </View>
+        <View className="button-item">
+          <OsButton variant="outlined" color="success">
+            成功按钮
+          </OsButton>
+        </View>
+
+        <View className="button-item">
+          <OsButton variant="outlined" color="warning">
+            警告按钮
+          </OsButton>
+        </View>
+
+        <View className="button-item">
+          <OsButton variant="outlined" color="danger">
+            危险按钮
+          </OsButton>
+        </View>
+
+        <View className="button-item">
+          <OsButton variant="outlined" color="default">
+            默认按钮
+          </OsButton>
+        </View>
+      </DemoBlock>
+
+      <DemoBlock title="细边框" hideMb>
+        <View className="button-item">
+          <OsButton variant="outlined" color="primary" hairline>
+            主要按钮
+          </OsButton>
+        </View>
+        <View className="button-item">
+          <OsButton variant="outlined" color="info" hairline>
+            信息按钮
+          </OsButton>
+        </View>
+        <View className="button-item">
+          <OsButton variant="outlined" color="success" hairline>
+            成功按钮
+          </OsButton>
+        </View>
+
+        <View className="button-item">
+          <OsButton variant="outlined" color="warning" hairline>
+            警告按钮
+          </OsButton>
+        </View>
+
+        <View className="button-item">
+          <OsButton variant="outlined" color="danger" hairline>
+            危险按钮
+          </OsButton>
+        </View>
+
+        <View className="button-item">
+          <OsButton variant="outlined" color="default" hairline>
+            默认按钮
+          </OsButton>
+        </View>
+      </DemoBlock>
+
+      <DemoBlock title="禁用状态" hideMb>
+        <View className="button-item">
+          <OsButton variant="contained" color="primary" disabled>
+            主要按钮
+          </OsButton>
+        </View>
+        <View className="button-item">
+          <OsButton variant="contained" color="info" disabled>
+            信息按钮
+          </OsButton>
+        </View>
+        <View className="button-item">
+          <OsButton variant="contained" color="success" disabled>
+            成功按钮
+          </OsButton>
+        </View>
+
+        <View className="button-item">
+          <OsButton variant="contained" color="warning" disabled>
+            警告按钮
+          </OsButton>
+        </View>
+
+        <View className="button-item">
+          <OsButton variant="contained" color="danger" disabled>
+            危险按钮
+          </OsButton>
+        </View>
+
+        <View className="button-item">
+          <OsButton variant="contained" color="default" disabled>
+            默认按钮
+          </OsButton>
+        </View>
+      </DemoBlock>
+
+      <DemoBlock title="加载状态" hideMb>
+        <View className="button-item">
+          <OsButton color="success" loading />
+        </View>
+
+        <View className="button-item">
+          <OsButton color="success" loading={{ type: 'spinner' }} />
+        </View>
+        <View className="button-item">
+          <OsButton color="primary" loading>
+            加载中...
           </OsButton>
         </View>
       </DemoBlock>
 
       <DemoBlock title="按钮形状" hideMb>
         <View className="button-item">
-          <OsButton type="default" shape="square">
-            线框默认
+          <OsButton variant="contained" color="primary" shape="square">
+            方形按钮
           </OsButton>
         </View>
+
         <View className="button-item">
-          <OsButton type="default" shape="round">
-            线框腰圆
+          <OsButton variant="contained" color="primary" shape="round">
+            圆形按钮
           </OsButton>
         </View>
       </DemoBlock>
-
-      <DemoBlock hideMb>
-        <View className="button-item">
-          <OsButton type="primary" shape="square">
-            色块默认
-          </OsButton>
-        </View>
-        <View className="button-item">
-          <OsButton type="primary" shape="round">
-            色块腰圆
-          </OsButton>
-        </View>
-      </DemoBlock>
-
       <DemoBlock title="按钮尺寸" hideMb>
-        <View className="button-item--block">
-          <OsButton size="normal">线框normal</OsButton>
-        </View>
-        <View className="button-item--block">
-          <OsButton size="small">线框small</OsButton>
-        </View>
-        <View className="button-item--block">
-          <OsButton size="min">线框min</OsButton>
-        </View>
-      </DemoBlock>
-      <DemoBlock hideMb>
-        <View className="button-item--block">
-          <OsButton type="primary" size="block">
-            色块block，界面长按钮
+        <View className="button-item block">
+          <OsButton color="primary" size="large">
+            大号按钮
           </OsButton>
         </View>
-        <View className="button-item--block">
-          <OsButton type="primary" size="large">
-            色块large，弹框按钮
-          </OsButton>
-        </View>
-        <View className="button-item--block">
-          <OsButton type="primary" size="normal">
-            色块normal
-          </OsButton>
-        </View>
-        <View className="button-item--block">
-          <OsButton type="primary" size="small">
-            色块small
-          </OsButton>
-        </View>
-        <View className="button-item--block">
-          <OsButton type="primary" size="min">
-            色块min
-          </OsButton>
-        </View>
-      </DemoBlock>
 
-      <DemoBlock title="带Icon" hideMb>
         <View className="button-item">
-          <OsButton type="default" icon="collect">
+          <OsButton color="primary" size="medium">
             普通按钮
           </OsButton>
         </View>
+
         <View className="button-item">
-          <OsButton type="primary" icon="collect">
-            色块按钮
+          <OsButton color="primary" size="small">
+            小型按钮
           </OsButton>
         </View>
+
         <View className="button-item">
-          <OsButton type="special1" icon="collect">
-            特殊按钮1
-          </OsButton>
-        </View>
-        <View className="button-item">
-          <OsButton type="special2" icon="collect">
-            特殊按钮2
-          </OsButton>
-        </View>
-        <View className="button-item--block">
-          <OsButton type="primary" size="block" icon="collect">
-            色块按钮
+          <OsButton color="primary" size="mini">
+            迷你按钮
           </OsButton>
         </View>
       </DemoBlock>
-
+      <DemoBlock title="块级元素" hideMb>
+        <View className="button-item block">
+          <OsButton color="primary" block>
+            块级按钮
+          </OsButton>
+        </View>
+      </DemoBlock>
       <DemoBlock title="自定义颜色" hideMb>
         <View className="button-item">
-          <OsButton type="default" color="#DD1A21">
-            自定义字体颜色
-          </OsButton>
+          <OsButton style={{ backgroundColor: '#7232dd', color: '#fff' }}>单色按钮</OsButton>
         </View>
         <View className="button-item">
-          <OsButton type="default" bdColor="#DD1A21">
-            自定义边框颜色
-          </OsButton>
-        </View>
-        <View className="button-item">
-          <OsButton type="primary" bgColor="#DD1A21">
-            自定义背景颜色
-          </OsButton>
+          <OsButton style={{ borderColor: '#7232dd', color: '#7232dd' }}>单色按钮</OsButton>
         </View>
         <View className="button-item">
           <OsButton
-            type="primary"
-            bdColor="transparent"
-            startBgColor="#EB767A"
-            endBgColor="#DD1A21"
+            style={{ background: 'linear-gradient(to right, #ff6034, #ee0a24)', color: '#fff' }}
           >
-            自定义渐变色
+            渐变色按钮
           </OsButton>
         </View>
       </DemoBlock>
-
-      {/* <DemoBlock title='自定义类名' hideMb>
-        <View className='button-item button-item--group'>
-          <OsButton button-custom='button-custom' type='primary'>线框按钮</OsButton>
-          <OsButton button-custom='button-custom' type='primary'>线框按钮</OsButton>
+      <DemoBlock title="自定义颜色" hideMb>
+        <View className="button-item">
+          <OsButton.Group variant="contained" color="primary" shape="round">
+            <OsButton>
+              <OsIcon type="return" color="white" />
+              上一步
+            </OsButton>
+            <OsButton>刷新</OsButton>
+            <OsButton>
+              下一步
+              <OsIcon
+                type="return"
+                color="white"
+                customStyle={{
+                  rotate: '180deg',
+                }}
+              />
+            </OsButton>
+          </OsButton.Group>
         </View>
-      </DemoBlock>
-
-      <DemoBlock title='开发全局样式测试' hideMb>
-        <View className='button-item button-item--group'>
-          <OsButton className='test' type='primary'>线框按钮</OsButton>
-          <OsButton className='test' type='primary'>线框按钮</OsButton>
+        <View className="button-item">
+          <OsButton.Group variant="outlined" shape="round">
+            <OsButton>
+              <OsIcon type="return" color="#999" />
+              上一步
+            </OsButton>
+            <OsButton>刷新</OsButton>
+            <OsButton>
+              下一步
+              <OsIcon
+                type="return"
+                color="#999"
+                customStyle={{
+                  rotate: '180deg',
+                }}
+              />
+            </OsButton>
+          </OsButton.Group>
         </View>
-      </DemoBlock> */}
-
-      <DemoBlock>
-        <DemoTable list={api}></DemoTable>
-      </DemoBlock>
-
-      <DemoBlock>
-        <DemoTable list={eventApi}></DemoTable>
+        <View className="button-item">
+          <OsButton.Group variant="text" shape="round">
+            <OsButton>
+              <OsIcon type="return" color="#999" />
+              上一步
+            </OsButton>
+            <OsButton>刷新</OsButton>
+            <OsButton>
+              下一步
+              <OsIcon
+                type="return"
+                color="#999"
+                customStyle={{
+                  rotate: '180deg',
+                }}
+              />
+            </OsButton>
+          </OsButton.Group>
+        </View>
       </DemoBlock>
     </View>
   );

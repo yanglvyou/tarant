@@ -108,25 +108,25 @@ importers:
         version: 3.6.17(@types/react@17.0.83)(postcss@8.4.49)
       '@tarojs/plugin-platform-alipay':
         specifier: 3.6.17
-        version: 3.6.17(@types/react@17.0.83)(postcss@8.4.49)
+        version: 3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)
       '@tarojs/plugin-platform-h5':
         specifier: 3.6.17
-        version: 3.6.17(@types/react@17.0.83)(postcss@8.4.49)
+        version: 3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)
       '@tarojs/plugin-platform-jd':
         specifier: 3.6.17
         version: 3.6.17(@types/react@17.0.83)(postcss@8.4.49)
       '@tarojs/plugin-platform-qq':
         specifier: 3.6.17
-        version: 3.6.17(@types/react@17.0.83)(postcss@8.4.49)
+        version: 3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)
       '@tarojs/plugin-platform-swan':
         specifier: 3.6.17
-        version: 3.6.17(@types/react@17.0.83)(postcss@8.4.49)
+        version: 3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)
       '@tarojs/plugin-platform-tt':
         specifier: 3.6.17
-        version: 3.6.17(@types/react@17.0.83)(postcss@8.4.49)
+        version: 3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)
       '@tarojs/plugin-platform-weapp':
         specifier: 3.6.17
-        version: 3.6.17(@types/react@17.0.83)(postcss@8.4.49)
+        version: 3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)
       '@tarojs/react':
         specifier: 3.6.17
         version: 3.6.17(react@17.0.2)
@@ -144,7 +144,7 @@ importers:
         version: 3.6.17(@types/react@17.0.83)(postcss@8.4.49)
       '@tarojs/taro-h5':
         specifier: 3.6.17
-        version: 3.6.17(@types/react@17.0.83)(postcss@8.4.49)
+        version: 3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)
       ossaui:
         specifier: ^0.7.4
         version: 0.7.4(@tarojs/components@3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2))(@tarojs/react@3.6.17(react@17.0.2))(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
@@ -283,6 +283,9 @@ importers:
         specifier: '>=16.13.0'
         version: 17.0.2(react@17.0.2)
     devDependencies:
+      '@rollup/plugin-alias':
+        specifier: ^5.1.1
+        version: 5.1.1(rollup@2.79.2)
       '@rollup/plugin-commonjs':
         specifier: ^13.0.0
         version: 13.0.2(rollup@2.79.2)
@@ -1756,6 +1759,15 @@ packages:
 
   '@polka/url@1.0.0-next.28':
     resolution: {integrity: sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw==}
+
+  '@rollup/plugin-alias@5.1.1':
+    resolution: {integrity: sha512-PR9zDb+rOzkRb2VD+EuKB7UC41vU5DIwZ5qqCpk0KJudcWAyi8rvYOhS7+L5aZCspw1stTViLgN5v6FF1p5cgQ==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
 
   '@rollup/plugin-commonjs@13.0.2':
     resolution: {integrity: sha512-9JXf2k8xqvMYfqmhgtB6eCgMN9fbxwF1XDF3mGKJc6pkAmt0jnsqurxQ0tC1akQKNSXCm7c3unQxa3zuxtZ7mQ==}
@@ -13145,6 +13157,10 @@ snapshots:
 
   '@polka/url@1.0.0-next.28': {}
 
+  '@rollup/plugin-alias@5.1.1(rollup@2.79.2)':
+    optionalDependencies:
+      rollup: 2.79.2
+
   '@rollup/plugin-commonjs@13.0.2(rollup@2.79.2)':
     dependencies:
       '@rollup/pluginutils': 3.1.0(rollup@2.79.2)
@@ -13458,7 +13474,7 @@ snapshots:
       - '@types/webpack'
       - '@types/webpack-dev-server'
 
-  '@tarojs/components-react@3.6.17(@types/react@17.0.83)(postcss@8.4.49)':
+  '@tarojs/components-react@3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)':
     dependencies:
       '@babel/runtime': 7.26.0
       '@tarojs/components': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)
@@ -13474,6 +13490,7 @@ snapshots:
       - '@types/webpack'
       - '@types/webpack-dev-server'
       - postcss
+      - react
       - vue
 
   '@tarojs/components@3.6.17(@types/react@17.0.83)(postcss@7.0.39)(react@17.0.2)':
@@ -13638,7 +13655,7 @@ snapshots:
       - supports-color
       - vue
 
-  '@tarojs/plugin-platform-alipay@3.6.17(@types/react@17.0.83)(postcss@8.4.49)':
+  '@tarojs/plugin-platform-alipay@3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)':
     dependencies:
       '@tarojs/components': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)
       '@tarojs/service': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)
@@ -13649,17 +13666,18 @@ snapshots:
       - '@types/webpack'
       - '@types/webpack-dev-server'
       - postcss
+      - react
       - supports-color
       - vue
 
-  '@tarojs/plugin-platform-h5@3.6.17(@types/react@17.0.83)(postcss@8.4.49)':
+  '@tarojs/plugin-platform-h5@3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)':
     dependencies:
       '@tarojs/components': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)
-      '@tarojs/components-react': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)
+      '@tarojs/components-react': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)
       '@tarojs/router': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)
       '@tarojs/service': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)
       '@tarojs/shared': 3.6.17
-      '@tarojs/taro-h5': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)
+      '@tarojs/taro-h5': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)
       babel-plugin-transform-taroapi: 3.6.17
       change-case: 4.1.2
       lodash-es: 4.17.21
@@ -13670,6 +13688,7 @@ snapshots:
       - '@types/webpack'
       - '@types/webpack-dev-server'
       - postcss
+      - react
       - supports-color
       - vue
 
@@ -13685,9 +13704,9 @@ snapshots:
       - supports-color
       - vue
 
-  '@tarojs/plugin-platform-qq@3.6.17(@types/react@17.0.83)(postcss@8.4.49)':
+  '@tarojs/plugin-platform-qq@3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)':
     dependencies:
-      '@tarojs/plugin-platform-weapp': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)
+      '@tarojs/plugin-platform-weapp': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)
       '@tarojs/service': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)
       '@tarojs/shared': 3.6.17
     transitivePeerDependencies:
@@ -13696,10 +13715,11 @@ snapshots:
       - '@types/webpack'
       - '@types/webpack-dev-server'
       - postcss
+      - react
       - supports-color
       - vue
 
-  '@tarojs/plugin-platform-swan@3.6.17(@types/react@17.0.83)(postcss@8.4.49)':
+  '@tarojs/plugin-platform-swan@3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)':
     dependencies:
       '@tarojs/components': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)
       '@tarojs/service': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)
@@ -13710,10 +13730,11 @@ snapshots:
       - '@types/webpack'
       - '@types/webpack-dev-server'
       - postcss
+      - react
       - supports-color
       - vue
 
-  '@tarojs/plugin-platform-tt@3.6.17(@types/react@17.0.83)(postcss@8.4.49)':
+  '@tarojs/plugin-platform-tt@3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)':
     dependencies:
       '@tarojs/components': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)
       '@tarojs/service': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)
@@ -13724,10 +13745,11 @@ snapshots:
       - '@types/webpack'
       - '@types/webpack-dev-server'
       - postcss
+      - react
       - supports-color
       - vue
 
-  '@tarojs/plugin-platform-weapp@3.6.17(@types/react@17.0.83)(postcss@8.4.49)':
+  '@tarojs/plugin-platform-weapp@3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)':
     dependencies:
       '@tarojs/components': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)
       '@tarojs/service': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)
@@ -13738,6 +13760,7 @@ snapshots:
       - '@types/webpack'
       - '@types/webpack-dev-server'
       - postcss
+      - react
       - supports-color
       - vue
 
@@ -13814,7 +13837,7 @@ snapshots:
 
   '@tarojs/shared@3.6.17': {}
 
-  '@tarojs/taro-h5@3.6.17(@types/react@17.0.83)(postcss@8.4.49)':
+  '@tarojs/taro-h5@3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)':
     dependencies:
       '@tarojs/api': 3.6.17
       '@tarojs/components': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)
@@ -13835,6 +13858,7 @@ snapshots:
       - '@types/webpack'
       - '@types/webpack-dev-server'
       - postcss
+      - react
       - vue
 
   '@tarojs/taro-loader@3.6.17(@types/react@17.0.83)(postcss@8.4.49)':
@@ -13889,12 +13913,12 @@ snapshots:
     dependencies:
       '@parcel/css': 1.14.0
       '@tarojs/helper': 3.6.17
-      '@tarojs/plugin-platform-alipay': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)
+      '@tarojs/plugin-platform-alipay': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)
       '@tarojs/plugin-platform-jd': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)
-      '@tarojs/plugin-platform-qq': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)
-      '@tarojs/plugin-platform-swan': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)
-      '@tarojs/plugin-platform-tt': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)
-      '@tarojs/plugin-platform-weapp': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)
+      '@tarojs/plugin-platform-qq': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)
+      '@tarojs/plugin-platform-swan': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)
+      '@tarojs/plugin-platform-tt': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)
+      '@tarojs/plugin-platform-weapp': 3.6.17(@types/react@17.0.83)(postcss@8.4.49)(react@17.0.2)
       '@tarojs/runner-utils': 3.6.17
       '@tarojs/runtime': 3.6.17
       '@tarojs/shared': 3.6.17

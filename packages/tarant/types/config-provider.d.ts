@@ -6,6 +6,7 @@ interface ConfigProviderProps {
 
 declare const ConfigProvider: ComponentClass<ConfigProviderProps>;
 
-export type ConfigProviderThemeVars = import('../../../types/loading.shared').LoadingThemeVars;
+export type ConfigProviderThemeVars = import('../../../types/loading.shared').LoadingThemeVars &
+  import('./button').ButtonThemeVars;
 
 export { ConfigProvider, ConfigProviderProps };

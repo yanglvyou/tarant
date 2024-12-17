@@ -4,7 +4,7 @@ import { View } from '@tarojs/components';
 import DemoBlock from '../../demoBlock';
 import DemoHeader from '../../demoHeader';
 import DemoTable from '../../demoTable';
-import { OsLoading, OsLoadingProps, ConfigProvider } from 'tarant';
+import { OsLoading, ConfigProvider, ConfigProviderThemeVars } from 'tarant';
 import './index.scss';
 
 function getClassObject() {
@@ -42,7 +42,7 @@ const initialListEvent = {
   ],
 };
 const demoTitle = 'Loading 加载';
-export default function Index(props: OsLoadingProps) {
+export default function Index(props: ConfigProviderThemeVars) {
   const [listApi] = useState(initialListApi);
 
   const [listEvent] = useState(initialListEvent);
