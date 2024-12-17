@@ -79,7 +79,7 @@ const config = {
         },
       },
     },
-    esnextModules: ['ossaui', 'tarant'],
+    esnextModules: ['ossaui', '@tarant/core'],
   },
 };
 

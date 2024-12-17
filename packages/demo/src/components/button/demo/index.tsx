@@ -4,7 +4,7 @@ import { View } from '@tarojs/components';
 import DemoBlock from '../../demoBlock';
 import DemoHeader from '../../demoHeader';
 import DemoTable from '../../demoTable';
-import { OsButton, OsIcon, ConfigProvider } from 'tarant';
+import { OsButton, OsIcon, ConfigProvider } from '@tarant/core';
 import './index.scss';
 
 const initialAPI = {

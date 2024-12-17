@@ -4,13 +4,13 @@
  * @param {string} title 标题
  */
 
-import React, { Component } from "react";
-import Taro from "@tarojs/taro";
-import { View } from "@tarojs/components";
-import classNames from "classnames";
-import { OsIcon } from "tarant";
+import React, { Component } from 'react';
+import Taro from '@tarojs/taro';
+import { View } from '@tarojs/components';
+import classNames from 'classnames';
+import { OsIcon } from '@tarant/core';
 
-import "./index.scss";
+import './index.scss';
 
 export default class DemoHeader extends Component<IProps> {
   onClick() {
@@ -19,14 +19,13 @@ export default class DemoHeader extends Component<IProps> {
       return;
     }
     Taro.navigateTo({
-      url: "/pages/index/index",
+      url: '/pages/index/index',
     });
   }
 
   render() {
-    const rootClassName = ["header", "header__title"];
-    const classObejct =
-      Taro.getEnv() !== Taro.ENV_TYPE.WEB ? "hide-split-line" : "";
+    const rootClassName = ['header', 'header__title'];
+    const classObejct = Taro.getEnv() !== Taro.ENV_TYPE.WEB ? 'hide-split-line' : '';
     const { icon } = this.props;
 
     return (

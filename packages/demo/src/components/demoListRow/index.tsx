@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { View } from '@tarojs/components';
 import { CommonEventFunction } from '@tarojs/components/types/common';
 import classNames from 'classnames';
-import { OsIcon } from 'tarant';
-import OsComponent from 'tarant/types/base';
+import { OsIcon } from '@tarant/core';
+import OsComponent from '@tarant/core/types/base';
 
 import './index.scss';
 

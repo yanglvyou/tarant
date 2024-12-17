@@ -14,12 +14,12 @@ module.exports = {
     [
       'import',
       {
-        libraryName: 'tarant',
-        customName: name => `tarant/lib/components/${name.replace(/^os-/, '')}`,
+        libraryName: '@tarant/core',
+        customName: name => `@tarant/core/lib/components/${name.replace(/^os-/, '')}`,
         customStyleName: name =>
-          `tarant/dist/styles/components/${name.replace(/^os-/, '')}/index.scss`,
+          `@tarant/core/dist/styles/components/${name.replace(/^os-/, '')}/index.scss`,
       },
-      'tarant',
+      '@tarant/core',
     ],
     [
       'import',

@@ -3,7 +3,7 @@ sidebar_position: 4
 demo_url: 'http://127.0.0.1:10086/#/components/button/demo/index'
 ---
 
-# OsButton 按钮
+# Button 按钮
 
 ### 介绍
 
@@ -99,16 +99,6 @@ import { OsButton } from 'tarant';
 ```jsx
 <OsButton variant="contained" color="primary" shape="square">方形按钮</OsButton>
 <OsButton variant="contained" color="primary" shape="round">圆形按钮</OsButton>
-```
-
-### 图标按钮
-
-通过 `icon` 属性设置按钮图标，支持 Icon 组件里的所有图标，也可以传入图标 URL。
-
-```jsx
-<OsButton variant="contained" color="primary" icon={<DoneOutlined />} />
-<OsButton variant="contained" color="primary" icon={<DoneOutlined />}>主要按钮</OsButton>
-<OsButton variant="outlined" color="primary" icon={<DoneOutlined />} iconPosition="right">轮廓按钮</OsButton>
 ```
 
 ### 按钮尺寸

@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import * as _ from 'lodash';
 import * as React from 'react';
 import { useMemo } from 'react';
-import { prefixClassname } from '../../utils//prefix';
+import { prefixClassname } from '../../utils/prefix';
 import { addUnitPx } from '../../utils/format/unit';
 import { LoadingProps } from '../../../types/loading';
 

@@ -4,7 +4,7 @@ import { View } from '@tarojs/components';
 import DemoBlock from '../../demoBlock';
 import DemoHeader from '../../demoHeader';
 import DemoTable from '../../demoTable';
-import { OsLoading, ConfigProvider, ConfigProviderThemeVars } from 'tarant';
+import { OsLoading, ConfigProvider, ConfigProviderThemeVars } from '@tarant/core';
 import './index.scss';
 
 function getClassObject() {

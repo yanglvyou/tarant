@@ -7,7 +7,6 @@ import { prefixClassname } from '../../utils/prefix';
 
 function ButtonGroup(props: ButtonGroupProps) {
   const { className, variant, shape, size, color, block, hairline, disabled, ...restProps } = props;
-  console.log('restProps: ', restProps);
   return (
     <ButtonGroupContext.Provider
       value={{
