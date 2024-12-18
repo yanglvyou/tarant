@@ -2,4 +2,4 @@
 '@tarant/core': patch
 ---
 
-调整包名称
+解决 bug

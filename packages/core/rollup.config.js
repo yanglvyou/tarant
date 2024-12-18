@@ -1,38 +1,40 @@
-import NodePath from "path";
-import RollupJson from "@rollup/plugin-json";
-import RollupNodeResolve from "@rollup/plugin-node-resolve";
-import RollupCommonjs from "@rollup/plugin-commonjs";
-import RollupTypescript from "rollup-plugin-typescript2";
-import RollupCopy from "rollup-plugin-copy";
-import CopyWatch from "rollup-plugin-copy-watch";
+import NodePath from 'path';
+import RollupJson from '@rollup/plugin-json';
+import RollupNodeResolve from '@rollup/plugin-node-resolve';
+import RollupCommonjs from '@rollup/plugin-commonjs';
+import RollupTypescript from 'rollup-plugin-typescript2';
+import RollupCopy from 'rollup-plugin-copy';
+import CopyWatch from 'rollup-plugin-copy-watch';
+import { terser } from 'rollup-plugin-terser';
+import visualizer from 'rollup-plugin-visualizer';
 
-import Package from "./package.json";
+import Package from './package.json';
 
-const resolveFile = (path) => NodePath.resolve(__dirname, path);
+const resolveFile = path => NodePath.resolve(__dirname, path);
 
 const externalPackages = [
-  "react",
-  "react-dom",
-  "@tarojs/components",
-  "@tarojs/runtime",
-  "@tarojs/taro",
-  "@tarojs/react",
+  'react',
+  'react-dom',
+  '@tarojs/components',
+  '@tarojs/runtime',
+  '@tarojs/taro',
+  '@tarojs/react',
 ];
 
 export default async () => {
-  const isProduction = process.env.NODE_ENV === "production";
-  console.log("rollup 编译 isProduction: ", isProduction);
+  const isProduction = process.env.NODE_ENV === 'production';
+  console.log('rollup 编译 isProduction: ', isProduction);
   return {
     input: resolveFile(Package.source),
     output: [
       {
         file: resolveFile(Package.main),
-        format: "cjs",
+        format: 'cjs',
         sourcemap: true,
       },
       {
         file: resolveFile(Package.module),
-        format: "es",
+        format: 'es',
         sourcemap: true,
       },
     ],
@@ -40,7 +42,7 @@ export default async () => {
     plugins: [
       RollupNodeResolve({
         customResolveOptions: {
-          moduleDirectory: "node_modules",
+          moduleDirectory: 'node_modules',
         },
       }),
       RollupCommonjs({
@@ -48,14 +50,14 @@ export default async () => {
       }),
       RollupJson(),
       RollupTypescript({
-        tsconfig: resolveFile("tsconfig.rollup.json"),
+        tsconfig: resolveFile('tsconfig.rollup.json'),
       }),
       isProduction &&
         RollupCopy({
           targets: [
             {
-              src: resolveFile("src/styles"),
-              dest: resolveFile("dist"),
+              src: resolveFile('src/styles'),
+              dest: resolveFile('dist'),
             },
           ],
         }),
@@ -63,12 +65,17 @@ export default async () => {
         CopyWatch({
           targets: [
             {
-              src: "src/styles",
-              dest: "dist",
+              src: 'src/styles',
+              dest: 'dist',
             },
           ],
-          watch: "src/styles/**", // 监听样式文件目录
+          watch: 'src/styles/**', // 监听样式文件目录
         }),
+      // terser(),
+      // visualizer({
+      //   filename: './dist/stats.html', // 生成的报告文件路径
+      //   open: true, // 构建后自动打开报告页面
+      // }),
     ].filter(Boolean),
   };
 };

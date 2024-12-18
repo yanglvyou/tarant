@@ -12,7 +12,7 @@ demo_url: 'http://127.0.0.1:10086/#/components/button/demo/index'
 ### 引入
 
 ```jsx
-import { OsButton } from 'tarant';
+import { OsButton } from '@tarant/core';
 ```
 
 ## 代码演示

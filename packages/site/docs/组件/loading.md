@@ -12,7 +12,7 @@ demo_url: 'http://127.0.0.1:10086/#/components/loading/demo/index'
 ### 引入
 
 ```tsx
-import { OsLoading } from 'tarant';
+import { OsLoading } from '@tarant/core';
 ```
 
 ## 代码演示
