@@ -6,7 +6,6 @@ import useToRef from '../use-to-ref';
 interface UseUncontrolledOptions<S> {
   defaultValue?: S;
   value?: S;
-
   onChange?: (...args: any[]) => void;
 }
 

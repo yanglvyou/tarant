@@ -1,5 +1,5 @@
 import { ViewProps } from '@tarojs/components/types/View';
-import { CSSProperties, ReactNode } from 'react';
+import { CSSProperties, ReactNode, ComponentClass } from 'react';
 
 interface BackdropProps extends ViewProps {
   style?: CSSProperties;

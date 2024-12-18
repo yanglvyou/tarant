@@ -1,5 +1,11 @@
 # tarant
 
+## 0.1.5
+
+### Patch Changes
+
+- 解决 bug
+
 ## 0.1.4
 
 ### Patch Changes
