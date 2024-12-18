@@ -1,0 +1,5 @@
+---
+'@tarant/core': patch
+---
+
+test
