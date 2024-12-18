@@ -1,5 +1,11 @@
 # tarant
 
+## 0.1.2
+
+### Patch Changes
+
+- b6b89cb: 解决 bug
+
 ## 0.1.1
 
 ### Patch Changes
