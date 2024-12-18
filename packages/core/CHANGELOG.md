@@ -1,5 +1,17 @@
 # tarant
 
+## 0.1.3
+
+### Patch Changes
+
+- 新增 Backdrop 背景板组件
+
+## 0.1.3-alpha.0
+
+### Patch Changes
+
+- 新增 Backdrop 背景板组件
+
 ## 0.1.2
 
 ### Patch Changes

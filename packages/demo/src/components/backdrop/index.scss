@@ -1,0 +1,51 @@
+.demo-button {
+  padding-bottom: 40px;
+
+  .content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    .content-block {
+      width: 120px * 2;
+      height: 120px * 2;
+      background: #fff;
+      border-radius: 8px;
+    }
+  }
+
+  .button-item {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 24px;
+    margin-right: 16px;
+
+    &--group {
+      width: 100%;
+
+      .button-custom {
+        width: 50%;
+        height: 80px;
+      }
+    }
+
+    &--block {
+      display: block;
+      margin-right: 0;
+    }
+  }
+
+  .block {
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  // .button-item--block {
+  //   composes: button-item;
+  // }
+}
+
+.button-item--block {
+  composes: button-item;
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"use-to-ref.js","sourceRoot":"","sources":["../../../src/hooks/use-to-ref/use-to-ref.ts"],"names":[],"mappings":"AAAA,OAAO,EAAoB,MAAM,EAAE,MAAM,OAAO,CAAC;AAEjD,MAAM,CAAC,OAAO,UAAU,QAAQ,CAAU,KAAQ;IAChD,MAAM,QAAQ,GAAG,MAAM,EAAK,CAAC;IAC7B,QAAQ,CAAC,OAAO,GAAG,KAAK,CAAC;IACzB,OAAO,QAA+B,CAAC;AACzC,CAAC"}

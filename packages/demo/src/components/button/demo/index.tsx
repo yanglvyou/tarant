@@ -4,7 +4,7 @@ import { View } from '@tarojs/components';
 import DemoBlock from '../../demoBlock';
 import DemoHeader from '../../demoHeader';
 import DemoTable from '../../demoTable';
-import { OsButton, OsIcon, ConfigProvider } from '@tarant/core';
+import { OsButton, OsIcon, ConfigProvider, Backdrop } from '@tarant/core';
 import './index.scss';
 
 const initialAPI = {
@@ -99,6 +99,8 @@ export default function Index(props: Props) {
   const [api] = useState(initialAPI);
   const [eventApi] = useState(initialEvent);
 
+  const [open, setOpen] = useState(false);
+
   useEffect(() => {
     Taro.setNavigationBarTitle({
       title: demoTitle,
@@ -118,9 +120,12 @@ export default function Index(props: Props) {
               }
             }
           >
-            <OsButton color="primary">主要按钮</OsButton>
+            <OsButton color="primary" onClick={() => setOpen(true)}>
+              主要按钮
+            </OsButton>
           </ConfigProvider>
         </View>
+        <Backdrop open={open} closeable onClose={() => setOpen(false)} />
         <View className="button-item">
           <OsButton color="info">信息按钮</OsButton>
         </View>

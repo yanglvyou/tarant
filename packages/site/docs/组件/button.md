@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 2
 demo_url: 'http://127.0.0.1:10086/#/components/button/demo/index'
 ---
 

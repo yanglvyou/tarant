@@ -18,7 +18,7 @@
     "changeset-pre-next": "changeset pre enter next",
     "changeset-pre-alpha": "changeset pre enter alpha",
     "changeset-pre-exit": "changeset pre exit",
-    "version-packages": "changeset version && pnpm start",
+    "version-packages": "changeset version",
     "version-packages:ci": "changeset version && pnpm install --shamefully-hoist --no-frozen-lockfile",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "release": "pnpm build && pnpm release:only",
