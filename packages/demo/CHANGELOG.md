@@ -1,5 +1,12 @@
 # demo
 
+## 0.0.5
+
+### Patch Changes
+
+- Updated dependencies [63071bb]
+  - @tarant/core@0.1.4
+
 ## 0.0.4
 
 ### Patch Changes
